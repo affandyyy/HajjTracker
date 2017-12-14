@@ -1,0 +1,64 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content id="login" padding [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+
+  <ion-row>
+    <ion-col>
+      <img class="logo" src="../assets/imgs/hajj-logo.png" />
+    </ion-col>
+  </ion-row>
+
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+    <!--divs-->
+    <div class="row responsive-md">
+      <div class="col col-50 col-offset-25">
+        <!---->
+
+        <ion-item>
+          <ion-label floating></ion-label>
+          <ion-input #email formControlName="email" type="email" placeholder="Your email address" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
+          <p>Enter a valid email.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating></ion-label>
+          <ion-input #password formControlName="password" type="password" placeholder="Your password" [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
+          <p>Must more than 6 characters.</p>
+        </ion-item>
+
+        <button ion-button block type="submit">
+          Login
+        </button>
+
+
+        <ion-row>
+          <ion-col><button ion-button block outline (click)="goToSignup()">
+              New ?
+            </button></ion-col>
+          <ion-col><button ion-button block outline (click)="goToResetPassword()">
+              Forgot ?
+            </button></ion-col>
+        </ion-row>
+
+
+        
+
+        
+
+      </div>
+    </div>
+
+  </form>
+
+
+
+
+</ion-content>
