@@ -8,7 +8,7 @@
 
   <ion-row>
     <ion-col>
-      <img class="logo" src="../assets/imgs/hajj-logo.png" />
+      <img class="logo" width="100%" src="https://i.imgur.com/kGa1wFT.png" />
     </ion-col>
   </ion-row>
 
@@ -33,17 +33,17 @@
         <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
           <p>Must more than 6 characters.</p>
         </ion-item>
-
-        <button ion-button block type="submit">
+<br>
+        <button ion-button block round type="submit" color="hajj">
           Login
         </button>
 
 
         <ion-row>
-          <ion-col><button ion-button block outline (click)="goToSignup()">
-              New ?
+          <ion-col><button ion-button block round (click)="goToSignup()">
+              Sign Up
             </button></ion-col>
-          <ion-col><button ion-button block outline (click)="goToResetPassword()">
+          <ion-col><button ion-button block round (click)="goToResetPassword()">
               Forgot ?
             </button></ion-col>
         </ion-row>

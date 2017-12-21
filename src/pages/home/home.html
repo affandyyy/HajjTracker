@@ -1,21 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="bg-hajj">
+    <ion-buttons end>
+      <button ion-button icon-only color="danger" (click)='logOut()'>
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding >
-  <h2>Hajj Tracker !</h2>
-  <img src="http://s1.ibtimes.com/sites/www.ibtimes.com/files/2014/10/01/rtr47yyc.jpg">
-  <p>
-      Millions of Muslims are performing Hajj in Saudi Arabia, retracing what they believe to be the footsteps of Prophet Abraham hundreds of years ago.
-      </p>
-      <p>As the annual pilgrimage unfolds across five days, Al Jazeera English keeps you up-to-date with news, videos and photos from the field.
-      
-      Get more at http://english.aljazeera.net </p>
-  
-
-  <button ion-button icon-only full (click)="logOut()">Logout
-    <ion-icon name="log-out"></ion-icon>
-  </button>
+<ion-content class="bg-hajj" padding scroll="false" text-center>
+  <!-- <h2>Hajj Tracker !</h2> -->
+  <img width="100%" src="https://i.imgur.com/NSuyUB8.png">
+  <div padding>
+    <button color="hajj" ion-button block round icon-left (click)="NavMe('3, Jalan PJS 11/15, Bandar Sunway, 47500 Subang Jaya, Selangor')">
+      <ion-icon name="navigate"></ion-icon>
+      Track Mutawif
+    </button>
+    <button color="hajj" ion-button block round icon-left (click)="NavMe('Hotel UiTM')">
+      <ion-icon name="navigate"></ion-icon>
+      Track Hotel
+    </button>
+  </div>
+  <div>
+    <p text-center>Please fill up your 
+    <br><b>Mutawif & Hotel ID</b></p>
+    <button color="hajj" ion-button round icon-left (click)="popOut()">
+      <ion-icon name='construct' is-active="false"></ion-icon>
+      Settings
+    </button>
+  </div>
 </ion-content>

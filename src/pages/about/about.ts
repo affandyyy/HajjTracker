@@ -38,6 +38,10 @@ export class AboutPage {
   marker: any;
   loading: any;
 
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+
+
   regionals: any = [];
   currentregional: any;
 
@@ -66,22 +70,34 @@ export class AboutPage {
     });
 
     loading.present();
+    
+    // locate the user
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
 
+        // firebase.database().ref().child(path).update({
+        //   lat: this.lat;
+        //   lng: this.lng;
+        // })
+      });
 
-    /// locate the user
-    // if (navigator.geolocation) {
-    //   navigator.geolocation.getCurrentPosition(position => {
-    //     this.lat = position.coords.latitude;
-    //     this.lng = position.coords.longitude;
-    //   });
-
-    //   setTimeout(() => {
-    //     loading.dismiss();
-    //   }, 1000);
-    // }
-
-
+      setTimeout(() => {
+        loading.dismiss();
+      }, 1000);
+    }
   }
+
+
+  // openHintModal() {
+  //   this.openModal('TrackModalPage');
+  // }
+
+  // openModal(pageName) {
+  //   this.modalCtrl.create(pageName, null, { cssClass: 'inset-modal' })
+  //                 .present();
+  // }
 
   //   initializeMap() {
   //     this.zone.run(() => {

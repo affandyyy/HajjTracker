@@ -12,11 +12,12 @@
 </ion-header>
 
 <ion-content>
-  
+  <!-- lat: 21.2891,
+  lng: 39.8979, -->
 
     <agm-map #map 
-    [latitude]="21.3891" 
-    [longitude]="39.8679">
+    [latitude]="21.2891" 
+    [longitude]="39.8979">
     
       <agm-marker *ngFor="let m of markers"
       [latitude]="m.lat" [longitude]="m.lng">
@@ -24,9 +25,14 @@
           <p>{{m.desc}}</p>
         </agm-info-window>
     </agm-marker>
-
-    
     </agm-map>
+
+<!--     
+    <agm-map 
+    [latitude]="lat" 
+    [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>  -->
 
 
 

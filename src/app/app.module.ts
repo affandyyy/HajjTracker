@@ -11,9 +11,11 @@ import { LoginPage } from '../pages/login/login';
 import { ResetPassword }from '../pages/reset-password/reset-password';
 import { Signup } from '../pages/signup/signup';
 import { GuidePage } from '../pages/guide/guide';
+import { SettingsPage } from '../pages/settings/settings';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { AuthData } from '../providers/auth-data';
 import { OfferData } from '../providers/offer-data';
@@ -26,6 +28,8 @@ import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicStorageModule } from '@ionic/storage';
 
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -37,6 +41,7 @@ import { IonicStorageModule } from '@ionic/storage';
     ResetPassword,
     Signup,
     GuidePage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -57,6 +62,7 @@ import { IonicStorageModule } from '@ionic/storage';
     ResetPassword,
     Signup,
     GuidePage,
+    SettingsPage
   ],
   providers: [
     AuthData,
@@ -64,8 +70,10 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,
     OfferData,
     Utility,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Geolocation
+    Geolocation,
+    LaunchNavigator,
 
   ]
 })

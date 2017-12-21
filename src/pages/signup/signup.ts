@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController,
+import { NavController, LoadingController,
     AlertController } from 'ionic-angular';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthData } from '../../providers/auth-data';
 import { EmailValidator } from '../../validators/email';
-import {HomePage}from'../home/home';
+import { HomePage }from'../home/home';
 
 
 /**
@@ -13,7 +13,6 @@ import {HomePage}from'../home/home';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',

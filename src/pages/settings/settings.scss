@@ -1,0 +1,48 @@
+page-settings {
+
+    ion-content {
+        &.content {
+            div.scroll-content {
+                top: 5%;
+                left: 5%;
+                width: 90%;
+                height: 70%;
+                overflow:hidden;
+            }
+        }
+
+        &.content-ios {
+            background-color: rgba(0, 0, 0, 0.3);
+
+            div.scroll-content {
+                background-color: #f8f8f8;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+
+        &.content-md {
+            background-color: rgba(0, 0, 0, 0.5);
+            
+            div.scroll-content {
+                background-color: #fafafa;
+                border-radius: 5px;
+                box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+                padding: 5px;
+            }
+        }
+    }
+
+
+}
+
+    .username {
+      font-size: 1.3em;
+    }
+    .label {
+      color: #7f7f7f;
+    }
+
+  
+  
+  
