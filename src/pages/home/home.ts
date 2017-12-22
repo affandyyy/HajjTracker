@@ -5,7 +5,7 @@ import { AuthData } from '../../providers/auth-data';
 import { LoginPage } from '../login/login';
 import { SettingsPage } from '../settings/settings';
 
-import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
 
 
 @Component({
