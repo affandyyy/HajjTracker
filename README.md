@@ -1,7 +1,8 @@
-# HajjTracker
-One-push-button tracking application to track mutawif &amp; base hotel
+<p align="center">
+  <img src="https://i.imgur.com/gZYuIZc.png">
+</p>
 
-![alt text](https://imgur.com/2NqKFdn.png)
+One-push-button tracking application to track mutawif &amp; base hotel
 
 Progress:
 
