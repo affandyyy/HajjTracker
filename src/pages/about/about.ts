@@ -19,7 +19,7 @@ export class AboutPage {
       {
         lat: 21.2891,
         lng: 39.8979,
-        desc: "Here you are"
+        desc: "You are here !"
       },
       {
         lat: 21.5091,

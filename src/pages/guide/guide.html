@@ -16,19 +16,9 @@
     <img [src]="info.imageUrl" (click)="cardTapped(info)" />
     <ion-card-content>
       <h2 class="card-title">
-        {{info.title}}
       </h2>
-      <p>
-        {{info.description}}
-      </p>
-      <agm-map #map [latitude]="21.2891" [longitude]="39.8979">
-
-        <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng">
-          <agm-info-window>
-            <p>{{m.desc}}</p>
-          </agm-info-window>
-        </agm-marker>
-      </agm-map>
+      <button ion-button block round color="hajj" icon-left (click)="toMaps()">
+        <ion-icon name="navigate"></ion-icon>{{info.title}}</button>
 
     </ion-card-content>
   </ion-card>

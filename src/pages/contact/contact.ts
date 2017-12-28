@@ -18,7 +18,7 @@ export class ContactPage {
 
   user = {
     name: 'Mohd Arief',
-    profileImage: 'https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png',
+    profileImage: 'https://imgur.com/GKC8IqV.jpg',
     coverImage: 'https://wallpaperscraft.com/image/sky_blue_white_clouds_tenderness_4937_602x339.jpg',
     occupation: 'Shah Alam',
     location: 'Malaysia',

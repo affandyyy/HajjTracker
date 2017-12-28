@@ -4,10 +4,10 @@
       Track
     </ion-title>
     <ion-buttons end>
-        <button ion-button icon-only (click)='getUserLocation()'>
-          <ion-icon name="ios-locate-outline"></ion-icon>
-        </button>
-      </ion-buttons>
+      <button ion-button icon-only (click)='getUserLocation()'>
+        <ion-icon name="ios-locate-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -15,19 +15,16 @@
   <!-- lat: 21.2891,
   lng: 39.8979, -->
 
-    <agm-map #map 
-    [latitude]="21.2891" 
-    [longitude]="39.8979">
-    
-      <agm-marker *ngFor="let m of markers"
-      [latitude]="m.lat" [longitude]="m.lng">
-      <agm-info-window>
-          <p>{{m.desc}}</p>
-        </agm-info-window>
-    </agm-marker>
-    </agm-map>
+  <agm-map #map [latitude]="21.2891" [longitude]="39.8979">
 
-<!--     
+    <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng">
+      <agm-info-window>
+        <p>{{m.desc}}</p>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+
+  <!--     
     <agm-map 
     [latitude]="lat" 
     [longitude]="lng">
@@ -37,7 +34,7 @@
 
 
 
-    <!-- <div [hidden]="!(switch == 'list')">
+  <!-- <div [hidden]="!(switch == 'list')">
         <ion-list>
           <ion-item>
             <h2>Test</h2>
@@ -58,4 +55,3 @@
 
 
 </ion-content>
-
