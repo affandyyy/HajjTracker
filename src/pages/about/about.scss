@@ -1,43 +1,9 @@
 page-about {
 
-  
+  agm-map {
+    height: 100%;
+  }
 
   // this on
   // this one old below
-
-  ion-modal,
-  .show-page {
-    // transparent black background overlay
-    background-color: rgba(0, 0, 0, .5) !important;
-    padding: 50px !important;
-  }
-  .toolbar-background {
-    color: red !important;
-  }
-  ion-modal.modal-wrapper {
-    transform: translateY(30%) !important;
-  }
-  ion-page.modal {
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  .modal-backdrop-bg {
-    background-color: #000;
-    opacity: 0;
-  }
-  .active .modal-backdrop-bg {
-    opacity: 0.5;
-  }
-}
-
-ion-modal.inset-modal {
-  // transparent black background overlay
-  background-color: rgba(0, 0, 0, .5) !important;
-  transition: opacity .25s ease-in-out;
-  padding: 10vh 5vw;
-
-}
-
-agm-map {
-  height: 100%;
 }

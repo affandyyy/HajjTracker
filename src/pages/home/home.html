@@ -14,19 +14,29 @@
   <div padding>
     <button color="hajj" ion-button block round icon-left (click)="NavMe('3, Jalan PJS 11/15, Bandar Sunway, 47500 Subang Jaya, Selangor')">
       <ion-icon name="navigate"></ion-icon>
-      Track Mutawif
+      Track Mutawwif
     </button>
-    <button color="hajj" ion-button block round icon-left (click)="NavMe('Hotel UiTM')">
+    <button color="hajj" ion-button block round icon-left (click)="NavMe('Hotel UiTM Shah Alam')">
       <ion-icon name="navigate"></ion-icon>
       Track Hotel
     </button>
+
+    
   </div>
-  <div>
-    <p text-center>Please fill up your 
-    <br><b>Mutawif & Hotel ID</b></p>
-    <button color="hajj" ion-button round icon-left (click)="popOut()">
-      <ion-icon name='construct' is-active="false"></ion-icon>
-      Settings
+  <button color="danger" ion-button round icon-left (click)="goAlert()">
+      SOS
     </button>
-  </div>
+    <div>
+        <p text-center>Please fill up your 
+        <br><b>Mutawif & Hotel ID</b></p>
+        <button color="hajj" ion-button round icon-left (click)="popOut()">
+          <ion-icon name='construct' is-active="false"></ion-icon>
+          Settings
+        </button>
+      </div>
+  
+  
+  <br>
+  <br>
+  
 </ion-content>

@@ -6,6 +6,8 @@ import { LoginPage } from '../login/login';
 import { SettingsPage } from '../settings/settings';
 
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 
 
 @Component({
@@ -13,13 +15,13 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  testRadioOpen = false;
+  testRadioResult: any;
 
 
-  constructor(private launchNavigator: LaunchNavigator, public navCtrl: NavController, public authData: AuthData, public modal: ModalController) {
+  constructor(public alertCtrl: AlertController, public loadingCtrl: LoadingController, private launchNavigator: LaunchNavigator, public navCtrl: NavController, public authData: AuthData, public modal: ModalController) {
 
   }
-
-
 
 
   logOut() {
@@ -38,7 +40,7 @@ export class HomePage {
   }
 
 
-  popOut(){
+  popOut() {
     const myModal = this.modal.create(SettingsPage, {
       showBackdrop: true,
       enableBackdropDismiss: true
@@ -46,10 +48,50 @@ export class HomePage {
     myModal.onDidDismiss(data => {
       console.log('modal.onDidDismiss');
     });
-    
+
     myModal.present();
-    }
   }
+
+  goAlert() {
+    const alert = this.alertCtrl.create();
+    alert.setTitle('Your Condition');
+
+    alert.addInput({
+      type: 'radio',
+      label: 'NORMAL',
+      value: 'blue',
+      checked: true
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'LOST',
+      value: 'green'
+    });
+
+    alert.addInput({
+      type: 'radio',
+      label: 'NEED HELP',
+      value: 'red'
+    });
+
+
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'OK',
+      handler: (data: any) => {
+        console.log('Radio data:', data);
+        this.testRadioOpen = false;
+        this.testRadioResult = data;
+      }
+    });
+
+    alert.present();
+  }
+}
+
+
+
 
 
 

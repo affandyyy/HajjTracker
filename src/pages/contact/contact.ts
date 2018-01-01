@@ -5,6 +5,7 @@ import { AuthData } from '../../providers/auth-data';
 
 
 import { LoginPage } from '../login/login';
+import { CallNumber } from '@ionic-native/call-number';
 
 @Component({
   selector: 'page-contact',
@@ -19,14 +20,13 @@ export class ContactPage {
   user = {
     name: 'Mohd Arief',
     profileImage: 'https://imgur.com/GKC8IqV.jpg',
-    coverImage: 'https://wallpaperscraft.com/image/sky_blue_white_clouds_tenderness_4937_602x339.jpg',
+    coverImage: 'https://i.stack.imgur.com/8L0i4.jpg',
     occupation: 'Shah Alam',
     location: 'Malaysia',
-    description: 'Passionate Designer. Recently focusing on developing mobile hybrid apps and web development.',
-    address: '27 King\'s College Cir, Toronto, ON M5S, Canada',
-    phone: '555 555 555',
-    email: 'cosima@niehaus.com',
-    whatsapp: '555 555 555',
+    address: 'No 30, Jalan Kristal 2, 7/76 B, Seksyen 7, 40000, Shah Alam, Selangor',
+    phone: '+60 16 217 4515',
+    email: 'ariefmata@gmail.com',
+    whatsapp: '+60 16 217 4515',
   };
 
   logOut() {
@@ -34,6 +34,12 @@ export class ContactPage {
         this.navCtrl.setRoot(LoginPage);
     });
 }
+
+// callThis(){
+//   this.callNumber.callNumber("+60162174515", true)
+//   .then(() => console.log('Launched dialer!'))
+//   .catch(() => console.log('Error launching dialer'));
+// }
 
 
 }

@@ -20,13 +20,13 @@
     </ion-list>
     <ion-list no-border>
       <ion-list-header>
-        General
+        SETUP
       </ion-list-header>
       
       <ion-item>
         <ion-icon name='contact' item-start></ion-icon>
         <ion-label>Mutawif ID</ion-label>
-        <ion-select [(ngModel)]="language">
+        <ion-select [(ngModel)]="language" placeholder="None">
           <ion-option *ngFor="let language of languages" [value]="language">{{language}}</ion-option>
         </ion-select>
       </ion-item>
@@ -34,7 +34,7 @@
       <ion-item>
           <ion-icon name='home' item-start></ion-icon>
           <ion-label>Hotel ID</ion-label>
-          <ion-select [(ngModel)]="hotel">
+          <ion-select [(ngModel)]="hotel" placeholder="Nearby">
             <ion-option *ngFor="let hotel of hotels" [value]="hotel">{{hotel}}</ion-option>
           </ion-select>
         </ion-item>
@@ -62,7 +62,7 @@
     <ion-row>
     <ion-col></ion-col>
     <ion-col>
-        <button ion-button small color='primary' (click)="goBack()">Done</button>
+        <button ion-button block full color='primary' (click)="goBack()">Done</button>
       </ion-col>
     <ion-col></ion-col>
   </ion-row>

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+
+
 /**
  * Generated class for the SettingsPage page.
  *
@@ -23,7 +26,7 @@ export class SettingsPage {
   language: any;
   hotel: any;
 
-  languages = ['Tajul Ariffin', 'Haji Rahman', 'Haji Abdul'];
+  languages = ['Haji Ramlan', 'Haji Rahman', 'Haji Abdul', 'Haji Thabrani', 'Haji Mohd Yahya'];
   hotels = [
     'Hotel UiTM',
     'Intekma Resort',
@@ -34,13 +37,14 @@ export class SettingsPage {
 
   user = {
     name: 'Mohd Arief',
-    imageUrl: 'https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png'
+    imageUrl: 'https://imgur.com/GKC8IqV.jpg'
   };
 
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    public loadingCtrl: LoadingController
   ) {
   }
 
@@ -63,6 +67,22 @@ export class SettingsPage {
 
   goBack() {
     this.navCtrl.pop();
+  }
+
+  ionViewDidLoad(){
+    this.presentLoadingDefault();
+  }
+
+  presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      content: 'Searching nearby hotel...'
+    });
+  
+    loading.present();
+  
+    setTimeout(() => {
+      loading.dismiss();
+    }, 1000);
   }
 
 

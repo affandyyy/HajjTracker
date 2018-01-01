@@ -45,4 +45,8 @@ export class GuidePage {
     console.log('ionViewDidLoad GuidePage');
   }
 
+  toMaps(){
+    this.navCtrl.push('TomapsPage');
+  }
+
 }

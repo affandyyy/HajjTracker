@@ -24,12 +24,12 @@ export class AboutPage {
       {
         lat: 21.5091,
         lng: 39.8079,
-        desc: `This is your hotel`
+        desc: `Team Leader`
       },
       {
-        lat: 20.5091,
-        lng: 39.8079,
-        desc: 'This is your team leader'
+        lat: 21.31880165,
+        lng: 39.64691162,
+        desc: 'Your hotel'
       }]
 
 
