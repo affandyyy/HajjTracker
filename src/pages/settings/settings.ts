@@ -26,7 +26,7 @@ export class SettingsPage {
   language: any;
   hotel: any;
 
-  languages = ['Haji Ramlan', 'Haji Rahman', 'Haji Abdul', 'Haji Thabrani', 'Haji Mohd Yahya'];
+  languages = ['Haji Ramlan', 'Haji Abdul', 'Haji Thabrani', 'Haji Mohd Yahya'];
   hotels = [
     'Hotel UiTM',
     'Intekma Resort',
