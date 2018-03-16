@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //All pages
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
+import {TrackPage} from '../pages/track/track';
 
 //Firebase
 import firebase from 'firebase';
@@ -15,7 +16,7 @@ import firebase from 'firebase';
 })
 export class MyApp {
   
-  rootPage:any = TabsPage;
+  rootPage:any = TrackPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 

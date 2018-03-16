@@ -12,6 +12,7 @@ import { ResetPassword }from '../pages/reset-password/reset-password';
 import { Signup } from '../pages/signup/signup';
 import { GuidePage } from '../pages/guide/guide';
 import { SettingsPage } from '../pages/settings/settings';
+import { TrackPage } from '../pages/track/track';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,7 +42,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     ResetPassword,
     Signup,
     GuidePage,
-    SettingsPage
+    SettingsPage,
+    TrackPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     ResetPassword,
     Signup,
     GuidePage,
-    SettingsPage
+    SettingsPage,
+    TrackPage
   ],
   providers: [
     AuthData,
