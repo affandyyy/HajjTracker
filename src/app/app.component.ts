@@ -40,7 +40,7 @@ export class MyApp {
 
       } else {
           console.log("login");
-          this.rootPage = TabsPage;
+          this.rootPage = TrackPage;
 
       }
 
