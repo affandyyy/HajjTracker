@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import {TrackPage} from '../pages/track/track';
+import { TrackModalPage } from '../pages/about/track-modal/track-modal';
 
 //Firebase
 import firebase from 'firebase';
@@ -16,7 +17,7 @@ import firebase from 'firebase';
 })
 export class MyApp {
   
-  rootPage:any = TrackPage;
+  rootPage:any = TrackModalPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
@@ -40,7 +41,7 @@ export class MyApp {
 
       } else {
           console.log("login");
-          this.rootPage = TrackPage;
+          this.rootPage = TrackModalPage;
 
       }
 

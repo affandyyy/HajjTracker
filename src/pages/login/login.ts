@@ -4,7 +4,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 import { EmailValidator } from '../../validators/email';
 import { AuthData } from '../../providers/auth-data';
-import { TabsPage } from '../../pages/tabs/tabs';
+// import { TabsPage } from '../../pages/tabs/tabs';
+
+import { TrackModalPage } from '../about/track-modal/track-modal';
 
 import { ResetPassword } from '../reset-password/reset-password';
 import { Signup } from '../signup/signup';
@@ -44,7 +46,7 @@ export class LoginPage {
       } else {
           this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password).then(authData => {
               this.loading.dismiss().then(() => {
-                  this.nav.setRoot(TabsPage);
+                  this.nav.setRoot(TrackModalPage);
               });
           }, error => {
               this.loading.dismiss().then(() => {

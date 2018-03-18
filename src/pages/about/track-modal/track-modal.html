@@ -6,17 +6,21 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Your Mutawwif</ion-title>
+  <ion-navbar color="bg-hajj">
+    <ion-buttons end>
+      <button ion-button icon-only color="hajj" (click)='logOut()'>
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content scroll="true" overflow-scroll="true" class="iframe-wrapper">
-  <iframe data-tap-disabled="true" src="https://locat.me/#oq48dszxjk"></iframe>
+  <iframe data-tap-disabled="true" src="https://locat.me/#oq48dszxjk" allow="geolocation"></iframe>
 </ion-content>
 <ion-footer>
-<button ion-button full color="danger" (click)="dismiss()">Done
-    </button>
+<!-- <button ion-button full color="danger" (click)="dismiss()">Done
+    </button> -->
 </ion-footer>

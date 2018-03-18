@@ -13,6 +13,7 @@ import { Signup } from '../pages/signup/signup';
 import { GuidePage } from '../pages/guide/guide';
 import { SettingsPage } from '../pages/settings/settings';
 import { TrackPage } from '../pages/track/track';
+import { TrackModalPage } from '../pages/about/track-modal/track-modal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -43,7 +44,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     Signup,
     GuidePage,
     SettingsPage,
-    TrackPage
+    TrackPage,
+    TrackModalPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     Signup,
     GuidePage,
     SettingsPage,
-    TrackPage
+    TrackPage,
+    TrackModalPage
   ],
   providers: [
     AuthData,
